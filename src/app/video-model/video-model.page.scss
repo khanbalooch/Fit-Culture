@@ -1,0 +1,34 @@
+  /**
+ * Fit Culture (https://www.ennapd.com/fitculture)
+ *
+ * Copyright © 2018-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */
+ ion-content{
+        --background:linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)), url(../../assets/imgs/appBackground.jpg) no-repeat;  
+          background-size: cover
+      }
+    .parent {
+        background:  rgba(0, 0, 0, 0.4117647058823529);
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .child {
+        margin: auto;  
+    }
+    .icon{
+        color:white;
+        font-size: 35px;
+        position: absolute;
+        margin-top: 95px;
+        right: 15px;
+    }
+    ion-toolbar{
+   --background: rgb(34, 33, 34);
+    --color:white;
+}
+ 

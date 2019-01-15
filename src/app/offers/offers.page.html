@@ -1,0 +1,29 @@
+<!--
+  Generated template for the FaqModelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-center text-uppercase>offers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" no-padding *ngFor="let p of pages">
+        <ion-card class="card" (click)="presentModal(p)">
+          <img src="{{p.image}}">
+          <ion-card-content>
+            <p style="color: white">{{p.title}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,126 @@
+/**
+ * Fit Culture (https://www.ennapd.com/fitculture)
+ *
+ * Copyright © 2018-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */
+ :host ion-content{
+--background: var(--ion-color-light-contrast);
+    --color: white; 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    object-fit: cover;
+    object-position: center;
+    }
+  :host ion-slide{
+    max-width: 100%;
+    max-height: 100%;
+    height: 100vh;;
+    width: 320px;
+}
+  :host .first{
+  background:linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)), url("../../assets/imgs/slide1.jpg") no-repeat  center center ;
+  background-size: cover;
+  object-fit: cover;
+
+}
+ :host .firstDiv{
+  color: white;
+    position: absolute;
+    bottom: 35px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+ :host .des{
+  bottom: 15px;
+  margin:0px
+}
+ :host .homeBtn{
+  margin-top: 15px;
+  color: #fff
+}
+:host ion-img{
+  max-width: 100%;
+  max-height: 100%;
+  height:120px;
+  width: 120px;
+}
+:host .firstImage{
+  position: relative;
+  height:120px;
+  background-color:transparent;
+  margin-top: 280px
+}
+ :host .slideTitle{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px
+}
+:host ion-toolbar{
+    --background: transparent;
+    --color:white;
+}
+ :host .button-outline-md,.button-outline-ios{
+  border-color:#fff
+}
+ :host .button-ios{
+  background:none !important;
+}
+ :host .second{
+  background:linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)), url("../../assets/imgs/slide2.jpg") no-repeat center center;
+  background-size: cover;
+  object-fit: cover;
+
+}
+ :host .third{
+  background:linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)), url("../../assets/imgs/slide3.jpg") no-repeat center center;
+  background-size: cover;
+  object-fit: cover;
+}
+  :host .scroll-content {
+  padding-top: 0 !important;
+}
+ :host .slides-md {
+    --bullet-background: var(--ion-text-color-step-800, #cccccc);
+    --bullet-background-active: var(--ion-color-danger-contrast);
+    --progress-bar-background: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.25);
+    --progress-bar-background-active: var(--ion-color-primary-shade, #3171e0);
+    --scroll-bar-background: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
+    --scroll-bar-background-active: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
+}
+:host ion-button{
+    --border-color: var(--ion-color-dark-contrast);
+    --background: transparent;
+    --padding-top: 0;
+    --padding-start: 1.1em;
+    --padding-end: 1em;
+    --padding-bottom: 0;
+    --height: 2.8em;
+    font-size: 13px;
+}
+ 
+   :host ion-title{
+    --font-size: 19px;
+    --font-weight: bold;
+  }
+:host {
+  .fullHeight{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+  }
+}
+.header-md:after{
+  height: 0 !important;
+}
+
+

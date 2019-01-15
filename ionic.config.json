@@ -1,0 +1,7 @@
+{
+  "name": "FitCulture",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

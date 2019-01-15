@@ -1,0 +1,72 @@
+/**
+ * Fit Culture (https://www.ennapd.com/fitculture)
+ *
+ * Copyright © 2018-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */
+ .h{
+    text-align: center;
+    margin-top: 100px;
+}
+h2{
+    color: white
+}
+p{
+    text-align: center;
+    color: white
+}
+.btn{
+    margin-top: 130px;
+}
+.btnfb:hover{
+     opacity: 0.7;
+}
+.Overlayer{
+    background: linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)),url("../../assets/imgs/appBackground.jpg") no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 !important;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+.scroll-content {
+    padding-top: 0 !important;
+  }
+  .btnfb{
+      --background: #3b5998;
+      --background-activated:#3b5998;
+     --background-activated: var( --ion-color-primary-tint, #3b5998);
+    --background-focused: var( --ion-color-primary-tint, #3b5998);
+    --color: var(--ion-color-primary-contrast, #fff);
+    --color-activated: var(--ion-color-primary-contrast, #fff);
+    --color-focused: var(--ion-color-primary-contrast, #fff);
+    --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 3px 1px -2px rgba(0, 0, 0, 0.2),0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --padding-start: 50px;
+    --padding-end: 50px;
+    --height: 2.4em;
+    font-size: 15px;
+    font-weight: normal;
+  }
+  .btngmail{
+    --background: rgb(214,59,62);
+    --background-activated: var(--ion-color-danger-shade, rgb(214,59,62));
+    --color: var(--ion-color-primary-contrast, #fff);
+    --color-activated: var(--ion-color-primary-contrast, #fff);
+    --color-focused: var(--ion-color-primary-contrast, #fff);
+    --box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 3px 1px -2px rgba(0, 0, 0, 0.2),0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --padding-start: 50px;
+    --padding-end: 50px;
+    --height: 2.4em;
+    font-size: 15px;
+    font-weight: normal;
+
+  }
+:host ion-toolbar{
+    --background: rgb(34, 33, 34);
+    --color:white;
+}

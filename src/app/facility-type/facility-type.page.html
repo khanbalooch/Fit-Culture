@@ -1,0 +1,45 @@
+<!--
+  Generated template for the FaqModelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>{{headerName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-tabs (ionChange)="changeTab($event)" class="ionBackground">
+    <ion-tab-bar slot="top" tabbarHighlight="true">
+      <ion-tab-button tab="Workout Plan" href="/facility-type/(workout:workout)">
+        <ion-label>Workout</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="FacilitySpecific" href="/facility-type/(facility-specific:facility-specific)">
+        <ion-label>Facility</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="Trainer" href="/facility-type/(traniee:traniee)">
+        <ion-label>Trainer</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+    <ion-tab tab="Workout Plan">
+      <ion-router-outlet name="workout"></ion-router-outlet>
+    </ion-tab>
+
+    <ion-tab tab="FacilitySpecific">
+      <ion-router-outlet name="facility-specific"></ion-router-outlet>
+    </ion-tab>
+
+    <ion-tab tab="Trainer">
+      <ion-router-outlet name="traniee"></ion-router-outlet>
+    </ion-tab>
+  </ion-tabs>
+
+</ion-content>

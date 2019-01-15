@@ -1,0 +1,78 @@
+/**
+ * Fit Culture (https://www.ennapd.com/fitculture)
+ *
+ * Copyright © 2018-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */
+.btn-title{
+    width: 100%;
+    display: flex;
+}
+
+.ios, .md{
+   
+:host{
+ion-content{
+        --background:linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)), url(../../assets/imgs/appBackground.jpg) no-repeat fixed 0% 100%;  
+       object-fit: cover;
+    object-position: center;
+      }
+  }
+:host{
+ion-list {
+    padding: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.44);
+    contain: content;
+    list-style-type: none;
+}
+  }
+
+:host{
+ion-item{
+         --color: #fff;
+          --padding-top: 16px;
+         --background: rgba(0, 0, 0, 0.44);
+           width: 100%;
+    }
+  }
+:host{
+ion-button{
+    --background: transparent;
+    --box-shadow: none;
+    --background-activated: #f5f6f900;
+    --background-focused: #3171e000;
+}
+}
+:host{
+ion-toolbar{
+   --background: rgb(34, 33, 34);
+    --color:white;
+}
+}
+:host{
+ion-list-header{
+        margin-bottom: 0 !important 
+    }
+    }
+:host{
+p{
+         color:rgba(255, 255, 255, 0.81) !important ;
+        }
+    }
+    .accordion-list {
+        height: 100%  
+    }
+:host{
+.end{
+    right: 16px !important;
+    position: absolute !important;
+    }
+    }
+    :host .active {
+        background: rgba(0, 0, 0, 0.4117647058823529);
+        color: #fff;   
+    }
+}

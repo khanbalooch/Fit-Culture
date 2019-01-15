@@ -1,0 +1,36 @@
+<!--
+  Generated template for the FaqModelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header *ngIf="showToolbar">
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title text-center>Workout</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list class="accordion-list" lines="none">
+    <ion-label *ngFor="let item of lists; let i = index" lines="none" no-padding>
+      <ion-button expand="full" slot="start" (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+         <span class="btn-title">{{ item.Name }}</span>
+        <ion-icon class="end" [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropup'"></ion-icon>
+      </ion-button>
+      <ion-list *ngIf="item.children && isGroupShown(i)" inset lines="none">
+        <ion-list-header *ngFor="let child of item.children; let j = index" no-padding lines="none">
+          <ion-item *ngIf="!child.children" class="child-item" ion-item (click)="presentModal()">
+            <ion-text>
+              <h2>{{ child.Name}}</h2>
+              <p text-wrap>Equipment: {{ child.Equipment}}</p>
+              <p text-wrap>Set:{{ child.Set}}</p>
+            </ion-text>
+          </ion-item>
+        </ion-list-header>
+      </ion-list>
+    </ion-label>
+  </ion-list>
+</ion-content>

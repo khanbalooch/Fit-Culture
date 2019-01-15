@@ -1,0 +1,31 @@
+<!--
+  Generated template for the FaqModelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header *ngIf="showHeader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title text-uppercase>Trainer</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+<ion-list>
+  <ion-item no-lines *ngFor="let p of profile" class="card">
+    <ion-avatar class="avatarImg">
+      <ion-img src="{{p.image}}"></ion-img>
+    </ion-avatar>
+    <div class="titleCard" padding-horizontal>
+      <h4>
+        <b>{{p.name}}</b>
+      </h4>
+      <h6>{{p.post}}</h6>
+      <p> {{p.des}}</p>
+    </div>
+  </ion-item>
+</ion-list>
+</ion-content>
