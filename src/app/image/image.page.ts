@@ -17,7 +17,9 @@ import { Router } from '@angular/router';
 })
 export class ImagePage implements OnInit {
   pages: any;
-  constructor( public modalCrl:ModalController, public route:Router) {
+  constructor(public modalCrl: ModalController, public route: Router) {
+
+
     this.pages = [
       { image: "assets/imgs/gallery1.jpg" },
       { image: "assets/imgs/gallery2.jpg" },
@@ -35,12 +37,13 @@ export class ImagePage implements OnInit {
       { image: "assets/imgs/gallery6.jpg" }
 
     ]
-   }
+
+  }
 
   ngOnInit() {
   }
   presentModal(page) {
     console.log('page', page)
-    this.route.navigate(['modal', page ]);
+    this.route.navigate(['modal', page]);
   }
 }

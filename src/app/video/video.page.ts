@@ -6,7 +6,7 @@
  * This source code is licensed as per the terms found in the
  * LICENSE.md file in the root directory of this source tree.
  */import { Component, OnInit } from '@angular/core';
- 
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,7 +16,10 @@ import { Router } from '@angular/router';
 })
 export class VideoPage implements OnInit {
   pages: any;
-  constructor(public route:Router) {
+  constructor(public route: Router) {
+
+
+
     this.pages = [
       { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery1.jpg" },
       { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery2.jpg" },
@@ -33,7 +36,9 @@ export class VideoPage implements OnInit {
       { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery5.jpg" },
       { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery6.jpg" }
     ]
-   }
+
+
+  }
 
   ngOnInit() {
   }
