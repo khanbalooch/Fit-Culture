@@ -1,11 +1,4 @@
-/**
- * Fit Culture (https://www.ennapd.com/fitculture)
- *
- * Copyright © 2018-present Enappd. All rights reserved.
- *
- * This source code is licensed as per the terms found in the
- * LICENSE.md file in the root directory of this source tree.
- */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -22,10 +15,10 @@ export class TranieePage implements OnInit {
   constructor() { 
     this.showHeader = false;
     this.profile = [
-      { image: "assets/imgs/trainer1.jpg", name: "Name: John Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
-      { image: "assets/imgs/trainer2.jpg", name: "Name: John Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
-      { image: "assets/imgs/trainer3.jpg", name: "Name: John Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
-      { image: "assets/imgs/trainer4.jpg", name: "Name: John Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
+      { image: "../../assets/imgs/slide1.jpg", name: "Name: Andy Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
+      { image: "../../assets/imgs/slide2.jpg", name: "Name: Bill Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
+      { image: "../../assets/imgs/slide3.jpg", name: "Name: Chris Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
+      { image: "../../assets/imgs/slide4.jpg", name: "Name: david Alexander", post: "Post: Point Guard", des: "Specializes in Class Program Coaching and Service with Style" },
     ]
   }
 
