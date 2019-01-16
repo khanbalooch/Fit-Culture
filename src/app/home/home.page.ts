@@ -26,6 +26,9 @@ export class HomePage implements OnInit {
   ionViewWillEnter() {
     this.showHeader=true
   }
+
+  ngOnInit() {
+  };
   constructor() { 
     this.showHeader = false;
     this.profile = [
