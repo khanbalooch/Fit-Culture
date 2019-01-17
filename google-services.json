@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "42496124729",
+    "firebase_url": "https://find-my-fitness-4bbb2.firebaseio.com",
+    "project_id": "find-my-fitness-4bbb2",
+    "storage_bucket": "find-my-fitness-4bbb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42496124729:android:71f02c19bd8fff8c",
+        "android_client_info": {
+          "package_name": "com.findmy.fitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42496124729-gbkvajs8c96q99cs5ms5ehagjvraoo1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMlRGGWP_jUo6xOKnaYuhOkMZT3A-hs-M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,7 +11,7 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 import { AlertController } from '@ionic/angular';
 import { ApplicationService } from '../services/application.service';
 import { Router } from '@angular/router';
-
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -19,7 +19,7 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private fb: Facebook, private alterCtrl: AlertController,
+  constructor(private fb: Facebook, private googlePlus: GooglePlus, private alterCtrl: AlertController,
     private applicationService: ApplicationService, private route: Router) { }
 
   ngOnInit() {
@@ -62,7 +62,10 @@ export class LoginPage implements OnInit {
   }
 
   loginWithGPlus() {
-
+    this.googlePlus.login({})
+      .then(res => {
+        this.handleSocialLoginSuccess(res);
+      }).catch(err => { this.handleSocialLoginError(err); });
   }
 
 }
