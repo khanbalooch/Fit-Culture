@@ -31,12 +31,12 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Gallery',
+      title: 'Trainers',
       url: '/gallery',
       icon: 'aperture'
     },
     {
-      title: 'Facility',
+      title: 'Teams',
       url: '/facilities',
       icon: 'apps'
     },
