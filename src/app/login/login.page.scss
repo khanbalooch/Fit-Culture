@@ -10,6 +10,12 @@
     text-align: center;
     margin-top: 100px;
 }
+._h {
+    text-align: center;
+    display: block;
+    transform: translateY(30px);
+    --webkit-transform: translateY(30px);
+}
 h2{
     color: white
 }
@@ -24,15 +30,19 @@ p{
      opacity: 0.7;
 }
 .Overlayer{
-    background: linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)),url("../../assets/imgs/appBackground.jpg") no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    object-position: center;
+    //background: linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)),url("../../assets/imgs/appBackground.jpg") no-repeat;
+    // background-size: cover;
+    // object-fit: cover;
+    // object-position: center center;
+    background: linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)),url("../../assets/imgs/Welcome@2x-i.jpg") no-repeat;
     margin: 0 !important;
     height: 100%;
     top: 0;
+    bottom: 0;
     position: absolute;
     width: 100%;
+    background-size: cover;
+    background-position: 100% 90%;
 }
 .scroll-content {
     padding-top: 0 !important;
