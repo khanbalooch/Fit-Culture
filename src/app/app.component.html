@@ -26,7 +26,7 @@
                 </ion-row>
               </ion-grid>
             </div>
-            <div text-center class="btnlogin">
+            <div *ngIf="!applicationService.isLogin" text-center class="btnlogin">
               <ion-button size="large" menuClose (click)="openLoginPage()">Login</ion-button>
             </div>
           </ion-menu-toggle>

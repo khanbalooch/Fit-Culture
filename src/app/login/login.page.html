@@ -20,7 +20,7 @@
       <h2>Join now</h2>
     </section>
     <div class="btn">
-      <ion-button expand="block" class="btnfb" padding-vertical>
+      <ion-button (click)="loginWithFB()" expand="block" class="btnfb" padding-vertical>
         <ion-icon name="logo-facebook"></ion-icon>
         &nbsp;&nbsp;
         <label>Login With Facebook</label>
@@ -28,7 +28,7 @@
     </div>
     <p>OR</p>
     <section>
-      <ion-button expand="block" class="btngmail" padding-vertical>
+      <ion-button (click)="loginWithGPlus()" expand="block" class="btngmail" padding-vertical>
         <ion-icon name="logo-googleplus"></ion-icon>
         &nbsp;&nbsp;
         <label>Login With Google</label>

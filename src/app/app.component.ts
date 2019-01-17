@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { Router } from '@angular/router';
+import { ApplicationService } from './services/application.service';
 
 
 @Component({
@@ -62,7 +63,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private screenOrientation: ScreenOrientation,
-    private route: Router
+    private route: Router,
+    private applicationService: ApplicationService
   ) {
     this.initializeApp();
   }

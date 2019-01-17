@@ -7,6 +7,10 @@
  * LICENSE.md file in the root directory of this source tree.
  */
 import { Component, OnInit } from '@angular/core';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
+import { AlertController } from '@ionic/angular';
+import { ApplicationService } from '../services/application.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,9 +19,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor(private fb: Facebook, private alterCtrl: AlertController,
+    private applicationService: ApplicationService, private route: Router) { }
 
   ngOnInit() {
+  }
+
+  loginWithFB() {
+    this.fb.login(['public_profile', 'user_friends', 'email']).then((res: FacebookLoginResponse) => {
+      console.log('Logged into Facebook!', res);
+      if (res.status === 'connected') {
+        this.handleSocialLoginSuccess(res);
+      }
+    })
+      .catch(e => {
+        console.log('Error logging into Facebook', e);
+        this.handleSocialLoginError(e);
+      });
+  }
+
+
+  async  handleSocialLoginSuccess(res) {
+    this.applicationService.isLogin = true;
+    const alert = await this.alterCtrl.create({
+      buttons: ['Ok'],
+      message: 'Successfully logined'
+    });
+    await alert.present();
+    alert.onDidDismiss().then(() => {
+      this.route.navigate(['/home'])
+    });
+
+  }
+
+
+  async handleSocialLoginError(err) {
+    const alert = await this.alterCtrl.create({
+      buttons: ['Ok'],
+      message: 'Error while login. Please try again later.'
+    });
+    await alert.present();
+  }
+
+  loginWithGPlus() {
+
   }
 
 }
