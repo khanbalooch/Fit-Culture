@@ -8,6 +8,7 @@
  */import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { TrainerService } from '../services/trainer.service';
 
 @Component({
   selector: 'app-video',
@@ -16,7 +17,7 @@ import { Router } from '@angular/router';
 })
 export class VideoPage implements OnInit {
   pages: any;
-  constructor(public route: Router) {
+  constructor(public route: Router, private trainerService: TrainerService) {
 
 
 
@@ -40,7 +41,13 @@ export class VideoPage implements OnInit {
 
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    try {
+      const trainers = await this.trainerService.getAll();
+      console.log(trainers);
+    } catch (error) {
+      console.log(error);
+    }
   }
   presentModal(page) {
     console.log('page', page)

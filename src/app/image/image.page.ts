@@ -9,6 +9,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { TrainerService } from '../../app/services/trainer.service';
 
 @Component({
   selector: 'app-image',
@@ -17,7 +18,8 @@ import { Router } from '@angular/router';
 })
 export class ImagePage implements OnInit {
   pages: any;
-  constructor(public modalCrl: ModalController, public route: Router) {
+  constructor(public modalCrl: ModalController, public route: Router,
+              private trainerService: TrainerService) {
 
 
     this.pages = [
@@ -40,7 +42,13 @@ export class ImagePage implements OnInit {
 
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    try {
+      const trainers = await this.trainerService.getAll();
+      console.log(trainers);
+    } catch (error) {
+      console.log(error);
+    }
   }
   presentModal(page) {
     console.log('page', page)

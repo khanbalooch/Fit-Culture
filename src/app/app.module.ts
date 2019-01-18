@@ -18,12 +18,15 @@ import { from } from 'rxjs';
 import { WorkoutModalComponent } from './workout-modal/workout-modal.component';
 import { FacilityTypePageModule } from './facility-type/facility-type.module';
 import { GalleryPageModule } from './gallery/gallery.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TrainerService } from './services/trainer.service';
 @NgModule({
   declarations: [AppComponent, WorkoutModalComponent],
   entryComponents: [WorkoutModalComponent],
   schemas: [NO_ERRORS_SCHEMA],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(),
     NguiMapModule.forRoot({ apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyDAxopl1Aak_YJJ56_pfVfbnVPYlwul7YE' }),
     AppRoutingModule,
@@ -35,6 +38,7 @@ import { GalleryPageModule } from './gallery/gallery.module';
     SplashScreen,
     ScreenOrientation,
     LaunchNavigator,
+    TrainerService,
     Facebook,
     GooglePlus,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
