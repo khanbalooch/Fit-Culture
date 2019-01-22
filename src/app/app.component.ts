@@ -52,6 +52,11 @@ export class AppComponent {
       icon: 'basket'
     },
     {
+      title: 'Settings',
+      url: 'settings',
+      icon: 'settings'
+    },
+    {
       title: 'FAQ',
       url: '/faq',
       icon: 'help'
@@ -75,6 +80,11 @@ export class AppComponent {
       title: 'Bookings',
       url: 'bookings',
       icon: 'paper'
+    },
+    {
+      title: 'Search',
+      url: '/search',
+      icon: 'search'
     }
   ];
 
