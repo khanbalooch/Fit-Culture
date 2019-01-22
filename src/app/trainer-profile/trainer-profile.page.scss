@@ -1,0 +1,13 @@
+:host ion-toolbar{
+    --background: rgb(34, 33, 34);
+    --color: white; 
+  }
+  ion-content{
+    --background:linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)), url(../../assets/imgs/appBackground.jpg) no-repeat;  
+    background-size: cover
+  }
+  ion-card-content{
+  text-align: justify;
+  background: rgba(0, 0, 0, 0.4117647058823529);
+  color: white
+  }

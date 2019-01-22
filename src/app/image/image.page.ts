@@ -26,7 +26,7 @@ export class ImagePage implements OnInit {
   isShowFilter: boolean = true;
 
 
-  constructor(public route: Router,
+  constructor(public router: Router,
               private trainerService: TrainerService,
               private loadingController: LoadingController) {}
 
@@ -57,29 +57,9 @@ export class ImagePage implements OnInit {
     return await loading.present();
   }
 
-/*  pages: any;
-
-    this.pages = [
-      { image: "assets/imgs/gallery1.jpg" },
-      { image: "assets/imgs/gallery2.jpg" },
-      { image: "assets/imgs/gallery3.jpg" },
-      { image: "assets/imgs/gallery8.jpg" },
-      { image: "assets/imgs/gallery5.jpg" },
-      { image: "assets/imgs/gallery6.jpg" },
-      { image: "assets/imgs/gallery7.jpg" },
-      { image: "assets/imgs/gallery8.jpg" },
-      { image: "assets/imgs/gallery1.jpg" },
-      { image: "assets/imgs/gallery2.jpg" },
-      { image: "assets/imgs/gallery3.jpg" },
-      { image: "assets/imgs/gallery8.jpg" },
-      { image: "assets/imgs/gallery5.jpg" },
-      { image: "assets/imgs/gallery6.jpg" }
-
-    ]
-
+  onTrainerSelect(trainer: any) {
+    console.log(trainer);
+    this.router.navigateByUrl('/trainer-profile');
   }
-  presentModal(page) {
-    console.log('page', page)
-    this.route.navigate(['modal', page]);
-  }*/
+
 }

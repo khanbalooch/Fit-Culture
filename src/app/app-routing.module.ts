@@ -94,7 +94,8 @@ const routes: Routes = [
   { path: 'bookings', loadChildren: './bookings/bookings.module#BookingsPageModule' },
   { path: 'workout', loadChildren: './workout/workout.module#WorkoutPageModule' },
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule' },
-  { path: 'search', loadChildren: './search/search.module#SearchPageModule' }
+  { path: 'search', loadChildren: './search/search.module#SearchPageModule' },  { path: 'trainer-profile', loadChildren: './trainer-profile/trainer-profile.module#TrainerProfilePageModule' }
+
 ];
 
 @NgModule({

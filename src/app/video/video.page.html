@@ -25,7 +25,7 @@
               <ion-list *ngIf="trainers?.length > 0">
                   <!-- trainer-->
                   <ion-card *ngFor="let trainer of trainers">
-                      <ion-card-content (click)="selectedTrainer(trainer)">
+                      <ion-card-content (click)="onTrainerSelect(trainer)">
                           <ion-item class="top-c">
                               <div class="lt">
                                   <ion-avatar *ngIf="isValidPic(trainer?.pictureURL)">

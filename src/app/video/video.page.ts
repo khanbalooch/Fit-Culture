@@ -25,7 +25,7 @@ export class VideoPage implements OnInit {
   isShowFilter: boolean = true;
 
 
-  constructor(public route: Router,
+  constructor(public router: Router,
               private trainerService: TrainerService,
               private loadingController: LoadingController) {}
 
@@ -56,43 +56,9 @@ export class VideoPage implements OnInit {
     return await loading.present();
   }
 
-
-
-/*  pages: any;
-  constructor(public route: Router, private trainerService: TrainerService) {
-
-
-
-    this.pages = [
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery1.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery2.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery3.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery8.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery5.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery6.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery7.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery8.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery1.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery2.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery3.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery8.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery5.jpg" },
-      { video: "assets/imgs/video.mp4", image: "assets/imgs/gallery6.jpg" }
-    ]
-
-
+  onTrainerSelect(trainer: any) {
+    console.log(trainer);
+    this.router.navigateByUrl('/trainer-profile');
   }
 
-  async ngOnInit() {
-    try {
-      const trainers = await this.trainerService.getAll();
-      console.log(trainers);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  presentModal(page) {
-    console.log('page', page)
-    this.route.navigate(['video-model', page]);
-  }*/
 }
