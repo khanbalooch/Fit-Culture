@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar *ngIf="!showSearch" padding-horizontal>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-center text-uppercase>Search</ion-title>
+    <ion-buttons slot="end" (click)="showHideSearch(true)">
+      <ion-icon name="search" item-right></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="showSearch">
+    <ion-searchbar>
+    </ion-searchbar>
+    <ion-buttons slot="end" (click)="showHideSearch(false)">
+      <ion-button color="light" fill="clear">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+</ion-content>

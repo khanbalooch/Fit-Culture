@@ -60,6 +60,11 @@ export class AppComponent {
       title: 'FAQ',
       url: '/faq',
       icon: 'help'
+    },
+    {
+      title: 'Search',
+      url: '/search',
+      icon: 'search'
     }
   ];
 
