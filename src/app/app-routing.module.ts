@@ -87,7 +87,8 @@ const routes: Routes = [
   { path: 'traniee', loadChildren: './traniee/traniee.module#TranieePageModule' },
   { path: 'video', loadChildren: './video/video.module#VideoPageModule' },
   { path: 'video-model', loadChildren: './video-model/video-model.module#VideoModelPageModule' },
-  { path: 'workout', loadChildren: './workout/workout.module#WorkoutPageModule' }
+  { path: 'workout', loadChildren: './workout/workout.module#WorkoutPageModule' },
+  { path: 'search', loadChildren: './search/search.module#SearchPageModule' }
 ];
 
 @NgModule({
