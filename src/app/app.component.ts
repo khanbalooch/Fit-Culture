@@ -55,6 +55,26 @@ export class AppComponent {
       title: 'FAQ',
       url: '/faq',
       icon: 'help'
+    },
+    {
+      title: 'Profile',
+      url: 'profile',
+      icon: 'person'
+    },
+    {
+      title: 'Map',
+      url: '/map',
+      icon: 'pin'
+    },
+    {
+      title: 'Messages',
+      url: 'messages',
+      icon: 'chatboxes'
+    },
+    {
+      title: 'Bookings',
+      url: 'bookings',
+      icon: 'paper'
     }
   ];
 

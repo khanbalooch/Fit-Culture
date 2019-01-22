@@ -1,0 +1,13 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-center text-uppercase>Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <agm-map (mapReady)='onMapReady($event)' [backgroundColor]='medium' [latitude]="location.lat" [longitude]="location.lng">
+  </agm-map>
+</ion-content>
