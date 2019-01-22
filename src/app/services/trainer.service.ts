@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from '@angular/common/http';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  params : new HttpParams ({})
 };
 const apiUrl = 'http://apps.capbpm.com/UF/api/v1/person';
 
@@ -18,6 +19,17 @@ export class TrainerService {
       const trainers = await this.http.get(apiUrl, httpOptions).toPromise();
       console.log(trainers);
       return trainers;
+    } catch (error) {
+        console.log(error);
+    }
+  }
+  async getByType(type: string ) {
+    const url = apiUrl + '/findByType?type=' + type ;
+
+    try {
+      const users = await this.http.get(url, httpOptions).toPromise();
+      console.log(users);
+      return users;
     } catch (error) {
         console.log(error);
     }

@@ -10,17 +10,54 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { TrainerService } from '../../app/services/trainer.service';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-image',
   templateUrl: './image.page.html',
-  styleUrls: ['./image.page.scss'],
+  styleUrls: ['./image.page.scss', './image.page.css'],
 })
 export class ImagePage implements OnInit {
-  pages: any;
-  constructor(public modalCrl: ModalController, public route: Router,
-              private trainerService: TrainerService) {
 
+  trainers: any;
+  error: any;
+  show: boolean = false;
+  isShowSearchBar: boolean = false;
+  isShowFilter: boolean = true;
+
+
+  constructor(public route: Router,
+              private trainerService: TrainerService,
+              private loadingController: LoadingController) {}
+
+
+  async ngOnInit() {
+    try {
+      const loading = await this.presentLoading();
+      this.trainers = await this.trainerService.getByType('TRAINER');
+      console.log(this.trainers);
+      this.loadingController.dismiss();
+    } catch (error) {
+      console.log(error);
+      this.loadingController.dismiss();
+    }
+  }
+
+  isValidPic(url: any) {
+    return (/\.(gif|jpg|jpeg|tiff|png)$/i).test(url);
+  }
+
+  async presentLoading() {
+    console.log('starting loading');
+     const loading = await this.loadingController.create({
+      spinner: 'circles',
+      keyboardClose: true,
+      message: 'Loading Trainers'
+    });
+    return await loading.present();
+  }
+
+/*  pages: any;
 
     this.pages = [
       { image: "assets/imgs/gallery1.jpg" },
@@ -41,17 +78,8 @@ export class ImagePage implements OnInit {
     ]
 
   }
-
-  async ngOnInit() {
-    try {
-      const trainers = await this.trainerService.getAll();
-      console.log(trainers);
-    } catch (error) {
-      console.log(error);
-    }
-  }
   presentModal(page) {
     console.log('page', page)
     this.route.navigate(['modal', page]);
-  }
+  }*/
 }

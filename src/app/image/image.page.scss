@@ -6,18 +6,55 @@
  * This source code is licensed as per the terms found in the
  * LICENSE.md file in the root directory of this source tree.
  */
- ion-img{
-      height: 142.3px;
-      padding-top: 3px;
-      padding-left: 3px;
-      padding-right: 3px;
-      border-radius:5px;
-      object-fit: cover !important;
-     object-position: center !important;
- }
   ion-content{
     --background:linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)), url(../../assets/imgs/appBackground.jpg) no-repeat;  
     object-fit: cover !important;
     object-position: center !important;
     text-align: justify
   }
+  ion-item {
+    --inner-padding-start: 1px !important;
+    --inner-padding-end: 1px !important;
+    --inner-padding-top: 1px !important;
+    --inner-padding-bottom: 1px !important;
+    --padding-start: 1px !important;
+    --padding-end: 1px !important;
+    --background : transparent !important; 
+    --background-activated:transparent !important;
+    --border-width: 0 0 0 0 !important;
+    --border-color: transparent;
+    --border-radius: none;
+    --highlight-background: none;
+    --full-highlight-height: none;
+    --inset-highlight-height: none;
+}
+
+
+ion-item.btm-c {
+    --min-height: 28px;
+}
+
+ion-grid.listing{
+    padding: 0 !important;
+}
+
+ion-grid.filter,ion-grid.banner {
+    --background: #f6f6f6;
+}
+
+
+ion-list {
+    --background: #f5f5f5;
+}
+
+ion-list.list,ion-list.list-md{
+    background: transparent;   
+}
+
+ion-card {
+    --background: #ffff;
+}
+
+ion-title{
+    padding: 0;
+}

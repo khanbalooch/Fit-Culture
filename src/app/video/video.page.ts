@@ -9,14 +9,56 @@
 
 import { Router } from '@angular/router';
 import { TrainerService } from '../services/trainer.service';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.page.html',
-  styleUrls: ['./video.page.scss'],
+  styleUrls: ['./video.page.scss', './video.page.css'],
 })
 export class VideoPage implements OnInit {
-  pages: any;
+
+  trainers: any;
+  error: any;
+  show: boolean = false;
+  isShowSearchBar: boolean = false;
+  isShowFilter: boolean = true;
+
+
+  constructor(public route: Router,
+              private trainerService: TrainerService,
+              private loadingController: LoadingController) {}
+
+
+  async ngOnInit() {
+    try {
+      const loading = await this.presentLoading();
+      this.trainers = await this.trainerService.getByType('TRAINER');
+      console.log(this.trainers);
+      this.loadingController.dismiss();
+    } catch (error) {
+      console.log(error);
+      this.loadingController.dismiss();
+    }
+  }
+
+  isValidPic(url: any) {
+    return (/\.(gif|jpg|jpeg|tiff|png)$/i).test(url);
+  }
+
+  async presentLoading() {
+    console.log('starting loading');
+     const loading = await this.loadingController.create({
+      spinner: 'circles',
+      keyboardClose: true,
+      message: 'Loading Trainers'
+    });
+    return await loading.present();
+  }
+
+
+
+/*  pages: any;
   constructor(public route: Router, private trainerService: TrainerService) {
 
 
@@ -52,5 +94,5 @@ export class VideoPage implements OnInit {
   presentModal(page) {
     console.log('page', page)
     this.route.navigate(['video-model', page]);
-  }
+  }*/
 }
