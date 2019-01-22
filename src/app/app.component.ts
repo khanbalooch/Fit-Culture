@@ -52,6 +52,11 @@ export class AppComponent {
       icon: 'basket'
     },
     {
+      title: 'Settings',
+      url: 'settings',
+      icon: 'settings'
+    },
+    {
       title: 'FAQ',
       url: '/faq',
       icon: 'help'
